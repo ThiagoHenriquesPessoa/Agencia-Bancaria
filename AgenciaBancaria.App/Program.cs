@@ -18,13 +18,18 @@ namespace AgenciaBancaria.App
                     "06825786490",
                     "02543026",
                     endereco);
-                ContaCorrente conta = new ContaCorrente(cliente);
+                ContaCorrente conta = new ContaCorrente(cliente, 100);
 
                 Console.WriteLine("conta: " +conta.Situacao + ": " + conta.NumeroConta + "-" + conta.DigitoVerificador);
 
-                conta.Abrir("Abcde123");
+                string senha = "Abcde123";
+                conta.Abrir(senha);
 
                 Console.WriteLine("conta: " + conta.Situacao + ": " + conta.NumeroConta + "-" + conta.DigitoVerificador);
+
+                conta.Sacar(10, senha);
+
+                Console.WriteLine("Saldo: " + conta.Saldo);
 
             }
             catch(Exception e)
