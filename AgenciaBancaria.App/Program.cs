@@ -18,7 +18,7 @@ namespace AgenciaBancaria.App
                     "06825786490",
                     "02543026",
                     endereco);
-                ContaBancaria conta = new ContaBancaria(cliente);
+                ContaCorrente conta = new ContaCorrente(cliente);
 
                 Console.WriteLine("conta: " +conta.Situacao + ": " + conta.NumeroConta + "-" + conta.DigitoVerificador);
 

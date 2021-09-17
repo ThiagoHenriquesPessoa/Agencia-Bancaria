@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AgenciaBancaria.Dominio
 {
-    public class ContaBancaria
+    public abstract class ContaBancaria
     {
         public int NumeroConta { get; init; }
         public int DigitoVerificador { get; init; }
