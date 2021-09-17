@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace AgenciaBancaria.Dominio
 {
-    class Validacoes
+    public static class Validacoes
     {
+        public static string Validacao(this string texto)
+        {
+            return string.IsNullOrWhiteSpace(texto) ? throw new Exception("Propriedade deve esta preenchida.") : texto;
+        }
     }
 }

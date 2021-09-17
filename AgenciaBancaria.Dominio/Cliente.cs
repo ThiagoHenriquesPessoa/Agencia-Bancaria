@@ -6,7 +6,21 @@ using System.Threading.Tasks;
 
 namespace AgenciaBancaria.Dominio
 {
-    class Cliente
+    public class Cliente
     {
+        public string Nome { get; private set; }
+        public string CPF { get; private set; }
+        public string RG { get; private set; }
+        public Endereco Endereco { get; private set; }
+
+
+        public Cliente(string nome, string cpf, string rg, Endereco endereco)
+        {
+            Nome = nome.Validacao();
+            CPF = cpf.Validacao();
+            RG = rg.Validacao();
+            Endereco = endereco ?? throw new Exception("Propriedade deve esta preenchida.");
+        }     
+                
     }
 }
