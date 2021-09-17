@@ -8,7 +8,7 @@ namespace AgenciaBancaria.Dominio
 {
     public static class Validacoes
     {
-        public static string Validacao(this string texto)
+        public static string ValidacaoString(this string texto)
         {
             return string.IsNullOrWhiteSpace(texto) ? throw new Exception("Propriedade deve esta preenchida.") : texto;
         }

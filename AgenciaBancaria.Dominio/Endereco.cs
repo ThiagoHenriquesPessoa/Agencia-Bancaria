@@ -15,10 +15,10 @@ namespace AgenciaBancaria.Dominio
 
         public Endereco(string logradouro, string cep, string cidade, string estado)
         {
-            Logradouro = logradouro.Validacao();
-            CEP = cep.Validacao();
-            Cidade = cidade.Validacao();
-            Estado = estado.Validacao();
+            Logradouro = logradouro.ValidacaoString();
+            CEP = cep.ValidacaoString();
+            Cidade = cidade.ValidacaoString();
+            Estado = estado.ValidacaoString();
         }
     }
 }

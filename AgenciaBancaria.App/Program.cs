@@ -14,10 +14,17 @@ namespace AgenciaBancaria.App
                     "59142240", "Parnamirim",
                     "Rio Grande do Norte");
                 Cliente cliente = new Cliente(
-                    "",
+                    "Thiago",
                     "06825786490",
                     "02543026",
                     endereco);
+                ContaBancaria conta = new ContaBancaria(cliente);
+
+                Console.WriteLine("conta: " +conta.Situacao + ": " + conta.NumeroConta + "-" + conta.DigitoVerificador);
+
+                conta.Abrir("Abcde123");
+
+                Console.WriteLine("conta: " + conta.Situacao + ": " + conta.NumeroConta + "-" + conta.DigitoVerificador);
 
             }
             catch(Exception e)

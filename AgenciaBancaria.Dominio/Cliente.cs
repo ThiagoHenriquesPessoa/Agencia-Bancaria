@@ -16,9 +16,9 @@ namespace AgenciaBancaria.Dominio
 
         public Cliente(string nome, string cpf, string rg, Endereco endereco)
         {
-            Nome = nome.Validacao();
-            CPF = cpf.Validacao();
-            RG = rg.Validacao();
+            Nome = nome.ValidacaoString();
+            CPF = cpf.ValidacaoString();
+            RG = rg.ValidacaoString();
             Endereco = endereco ?? throw new Exception("Propriedade deve esta preenchida.");
         }     
                 
