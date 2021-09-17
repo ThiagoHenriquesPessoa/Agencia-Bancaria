@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net5.0": {}
+    "net5.0": {
+      "AgenciaBancaria.Dominio/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/AgenciaBancaria.Dominio.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AgenciaBancaria.Dominio.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "AgenciaBancaria.Dominio/1.0.0": {
+      "type": "project",
+      "path": "../AgenciaBancaria.Dominio/AgenciaBancaria.Dominio.csproj",
+      "msbuildProject": "../AgenciaBancaria.Dominio/AgenciaBancaria.Dominio.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net5.0": []
+    "net5.0": [
+      "AgenciaBancaria.Dominio >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\thiag\\.nuget\\packages\\": {},
@@ -41,7 +60,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\thiag\\source\\repos\\AgenciaBancaria\\AgenciaBancaria.Dominio\\AgenciaBancaria.Dominio.csproj": {
+              "projectPath": "C:\\Users\\thiag\\source\\repos\\AgenciaBancaria\\AgenciaBancaria.Dominio\\AgenciaBancaria.Dominio.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
